@@ -1,0 +1,75 @@
+﻿
+@model WebProgramlama_Proje.Models.ViewModel
+
+@using Microsoft.AspNetCore.Builder
+@using Microsoft.AspNetCore.Localization
+@using Microsoft.Extensions.Options
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.EntityFrameworkCore;
+@using WebProgramlama_Proje.Data;
+
+@inject IViewLocalizer Localizer
+@inject IOptions<RequestLocalizationOptions> LocOptions
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="@Url.Content("~/css/UserIndex.css")" rel="stylesheet" type="text/css" />
+    <title>Index</title>
+</head>
+<body>
+
+    <h2 style="color:aliceblue">@Localizer["Users"]</h2>
+    <table class=" TableSelf">
+        <thead>
+            <tr>
+                <th>
+                    <p class="TableHeader"> @Localizer["UserName"]</p>
+                </th>
+                <th>
+                    <p class="TableHeader"> @Localizer["Password"]</p>
+                </th>
+                <th>
+                    <p class="TableHeader"> @Localizer["MailAddress"]</p>
+                </th>
+                <th>
+                    <p class="TableHeader"> @Localizer["Wallet"]</p>
+                </th>
+                <th></th>
+            </tr>
+            <tr class="Bos">
+                <th class="Bos"><p> </p></th>
+                <th class="Bos"><p> </p></th>
+                <th class="Bos"><p> </p></th>
+                <th class="Bos"><p> </p></th>
+                <th class="Bos"><p> </p></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Users)
+            {
+                <tr>
+                    <td>
+                        <p class="TableItem"> @Html.DisplayFor(modelItem => item.userName) </p>
+                    </td>
+                    <td>
+                        <p class="TableItem"> @Html.DisplayFor(modelItem => item.userPass) </p>
+                    </td>
+                    <td>
+                        <p class="TableItem"> @Html.DisplayFor(modelItem => item.userMail) </p>
+                    </td>
+                    <td>
+                        <p class="TableItem">  @Html.DisplayFor(modelItem => item.userWallet) </p>
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.userID">@Localizer["Edit"]</a> 
+                        <a asp-action="Delete" asp-route-id="@item.userID" class="Delete">@Localizer["Delete"]</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,39 @@
+﻿@model WebProgramlama_Proje.Models.Library
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+
+<div>
+    <h4>Library</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.userID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.userID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.gameID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.gameID)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.libraryID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
+</body>
+</html>

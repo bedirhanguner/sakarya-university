@@ -1,0 +1,135 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+h2 {
+    color: aliceblue;
+    text-transform: uppercase;
+}
+
+h4 {
+    color: aliceblue;
+    text-transform: uppercase;
+}
+
+.columnVid {
+    float: left;
+    width: 65%;
+}
+
+.columnDesc {
+    float: none;
+    width: 35%;
+    align-content: center;
+    background-color: #171717;
+    align-content: center
+}
+
+.descImage {
+    height: 196px;
+    width: 360px;
+    padding-top: 25px;
+    margin-left: 20px;
+}
+
+.description {
+    color: aliceblue;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.comment {
+    width:100%;
+    border: 1px solid #000000;
+    background-color: #171717;
+    border-radius: 5px;
+    padding: 16px;
+    margin: 16px 0
+}
+
+.comment::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.comment img {
+    float: left;
+    margin-right: 20px;
+    border-radius: 100%;
+}
+
+.comment span {
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+.comment p {
+    color: aliceblue;
+}
+
+.PurchaseDiv {
+    width: 80%;
+    height: 80px;
+    background-color: black;
+    float: left;
+}
+
+.PurchaseText {
+    color: aliceblue;
+    margin-top: 25px;
+    margin-left: 30px;
+}
+
+.PurchaseButton {
+    float: right;
+    width: 20%;
+    height: 80px;
+    background-color: black;
+}
+
+.GreenButton {
+    margin-right: 20px;
+    margin-top: 20px;
+    background-color: #0dd70f;
+    color: black;
+    width: 150px;
+    height: 50%;
+}
+
+.checked {
+    color: #1f2253;
+}
+
+.UserImage {
+    width: 60px;
+    height: 60px;
+}
+
+
+
+.btn-grad {
+    background-image: linear-gradient(to right, #ADD100 0%, #7B920A 51%, #ADD100 100%)
+}
+
+.btn-grad {
+    margin: 15px;
+    padding: 10px 30px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+
+    border-radius: 8px;
+    display: block;
+}
+
+         
+         

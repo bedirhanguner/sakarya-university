@@ -1,0 +1,61 @@
+﻿@model IEnumerable<WebProgramlama_Proje.Models.Comment>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.userID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.gameID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.commentDesc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.commentIsRecommend)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.userID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.gameID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.commentDesc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.commentIsRecommend)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.commentID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.commentID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.commentID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</body>
+</html>

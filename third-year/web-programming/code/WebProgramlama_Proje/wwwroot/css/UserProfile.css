@@ -1,0 +1,36 @@
+﻿h2{
+    color:aliceblue;
+}
+
+hr{
+    color:black;
+    height: 1px;
+}
+
+td{
+    color: #171717;
+    font-size: 25px;
+}
+
+th{
+    color:aliceblue;
+    font-size: 18px;
+}
+
+.LoginButton {
+    background-color: #171717;
+    border: none;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    width:60px;
+}
+
+.Images {
+    border-radius: 100%;
+    width: 150px;
+    height: 150px;
+    float:right;
+}

@@ -1,0 +1,72 @@
+﻿
+@model WebProgramlama_Proje.Models.ViewModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="@Url.Content("~/css/Home.css")" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    <div class="about-section">
+        <h1>Musluk</h1>
+        <p>WEB Programlama Dersi Proje Ödevi</p>
+    </div>
+    <br />
+    <h2 style="text-align:center">Proje Takımı</h2>
+    <br /><br />
+    <div class="row">
+        <div class="column">
+            <div class="card">
+                <div class="container">
+                    <h2>Karaay Karaoğul</h2>
+                    <p class="title">B181210054</p>
+                    <p>karaay.karaogul@ogr.sakarya.edu.tr</p>
+                    <p><input type="button" class="button" value="Github" onclick="openKaraay()"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <div class="container">
+                    <h2>Bedirhan Güner</h2>
+                    <p class="title">B171210036</p>
+                    <p>bedirhan.guner@ogr.sakarya.edu.tr</p>
+                    <p><input type="button" class="button" value="Github" onclick="openBedirhan()"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <div class="container">
+                    <h2>Doğukhan Bayram</h2>
+                    <p class="title">B181210084</p>
+                    <p>dogukhan.bayram@ogr.sakarya.edu.tr</p>
+                    <p><input type="button" class="button" value="Github" onclick="openDogukhan()"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+<script>
+    function openKaraay() {
+        window.open("https://github.com/karaaykaraogul");
+    }
+
+    function openBedirhan() {
+        window.open("https://github.com/bedirhanguner");
+    }
+    function openDogukhan() {
+        window.open("https://github.com/dogukhanbayram");
+    }
+</script>

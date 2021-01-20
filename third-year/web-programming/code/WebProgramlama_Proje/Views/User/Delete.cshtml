@@ -1,0 +1,37 @@
+﻿@model WebProgramlama_Proje.Models.User
+
+@using Microsoft.AspNetCore.Builder
+@using Microsoft.AspNetCore.Localization
+@using Microsoft.Extensions.Options
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.EntityFrameworkCore;
+@using WebProgramlama_Proje.Data;
+
+@{
+    Layout = "Deneme";
+}
+
+@inject IViewLocalizer Localizer
+@inject IOptions<RequestLocalizationOptions> LocOptions
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+</head>
+<body>
+
+    <h3> @Localizer["Sure"]</h3>
+    <div>
+        <hr />
+
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="userID" />
+            <input type="submit" value="Delete" class="btn btn-danger" /> |
+            <input type="submit" asp-action="AdminPanel" class="btn btn-primary " value="Back to List" />
+        </form>
+    </div>
+</body>
+</html>

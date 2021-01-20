@@ -1,0 +1,55 @@
+﻿@model WebProgramlama_Proje.Models.User
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit</title>
+</head>
+<body>
+
+<h4>User</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="userID" />
+            <div class="form-group">
+                <label asp-for="userName" class="control-label"></label>
+                <input asp-for="userName" class="form-control" />
+                <span asp-validation-for="userName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="userPass" class="control-label"></label>
+                <input asp-for="userPass" class="form-control" />
+                <span asp-validation-for="userPass" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="userMail" class="control-label"></label>
+                <input asp-for="userMail" class="form-control" />
+                <span asp-validation-for="userMail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="userWallet" class="control-label"></label>
+                <input asp-for="userWallet" class="form-control" />
+                <span asp-validation-for="userWallet" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="AdminPanel">Back to List</a>
+</div>
+
+</body>
+</html>

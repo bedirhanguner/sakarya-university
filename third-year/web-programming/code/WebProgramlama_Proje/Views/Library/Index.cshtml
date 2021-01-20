@@ -1,0 +1,55 @@
+﻿@model WebProgramlama_Proje.Models.ViewModel
+
+@{
+    ViewData["Title"] = "Library";
+    int currentUser = 0;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="@Url.Content("~/css/LibraryIndex.css")" rel="stylesheet" type="text/css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    @foreach (var item in Model.Users)
+    {
+        if (item.userMail == User.Identity.Name)
+        {
+            currentUser = item.userID;
+        }
+    }
+
+    @foreach (var oyun in Model.Games)
+    {
+        @foreach (var lib in Model.Libraries)
+        {
+
+            @if (lib.userID == currentUser)
+            {
+                @if (lib.gameID == oyun.gameID)
+                {
+                    <table class="TableSelf">
+                        <tr>
+                            <td class=" TableText">
+                                <img src=@oyun.gameIMG class=" TableImage" />
+                            </td>
+
+                            <td class=" TableTextMiddle">
+                                <a>@oyun.gameName </a>
+                            </td>
+                            <td class=" TableTextRight">
+                                <a>@oyun.gamePrice </a>
+                            </td>
+                        </tr>
+
+                    </table>
+                    <br />
+                }
+            }
+        }
+    }
+</body>
+</html>

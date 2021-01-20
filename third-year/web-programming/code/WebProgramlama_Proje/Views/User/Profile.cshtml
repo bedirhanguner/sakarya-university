@@ -1,0 +1,114 @@
+﻿@model WebProgramlama_Proje.Models.ViewModel
+
+@using Microsoft.AspNetCore.Builder
+@using Microsoft.AspNetCore.Localization
+@using Microsoft.Extensions.Options
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.EntityFrameworkCore;
+@using WebProgramlama_Proje.Data;
+
+@inject IViewLocalizer Localizer
+@inject IOptions<RequestLocalizationOptions> LocOptions
+<!DOCTYPE html>
+
+@{
+    User user = new User();
+    if (User.Identity.IsAuthenticated)
+    {
+        foreach (var item in Model.Users)
+        {
+            if (item.userMail == User.Identity.Name)
+            {
+                user = item;
+            }
+        }
+    }
+}
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="@Url.Content("~/css/UserProfile.css")" rel="stylesheet" type="text/css" />
+    <title>Profile</title>
+</head>
+<body>
+
+    <div style="color: floralwhite; float:left">
+        <h2>@Localizer["Profile"]</h2>
+        <hr />
+        <table style="width:100%">
+            <tr>
+                <th style="float:left;">
+                    <table>
+                        <tr>
+                            <td>
+                                @Localizer["UserName"]
+                            </td>
+                            <th>
+                                @user.userName
+                            </th>
+                        </tr>
+                    </table>
+                    <br />
+                    <table>
+                        <tr>
+                            <td>
+                                @Localizer["MailAddress"]
+                            </td>
+                            <th>
+                                @user.userMail
+                            </th>
+                        </tr>
+                    </table>
+                    <br />
+                    <table>
+                        <tr>
+                            <td>
+                                @Localizer["Wallet"]
+                            </td>
+                            <th colspan="2">
+                                @user.userWallet TL
+                            </th>
+                        </tr>
+                    </table>
+                    <br />
+                    <table>
+                        <tr>
+                            <td>
+                                <label class="formHeader">@Localizer["Add"]</label>
+                            </td>
+
+                            <td>
+                                <form action="" method="post">
+                                    <button type="submit" value="Ekle" class="LoginButton center" asp-area="" asp-controller="User" asp-action="bakiyeEkleOn">10</button>
+
+                                    <button type="submit" value="Ekle" class="LoginButton center" asp-area="" asp-controller="User" asp-action="bakiyeEkleYirmi">20</button>
+
+                                    <button type="submit" value="Ekle" class="LoginButton center" asp-area="" asp-controller="User" asp-action="bakiyeEkleElli">50</button>
+
+                                    <button type="submit" value="Ekle" class="LoginButton center" asp-area="" asp-controller="User" asp-action="bakiyeEkleYuz">100</button>
+
+
+                                    <div class="form-group">
+                                        <a class="LoginPls" asp-area="" asp-controller="User" asp-action="bakiyeDegis"></a>
+                                    </div>
+
+                                </form>
+                            </td>
+                        </tr>
+                    </table>
+                </th>
+
+                <th style="float:right;">
+                    <img src=@user.userIMG class="Images" />
+                </th>
+            </tr>
+        </table>
+
+
+
+
+
+    </div>
+</body>
+</html>

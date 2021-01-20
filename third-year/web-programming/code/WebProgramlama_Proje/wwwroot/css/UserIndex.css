@@ -1,0 +1,47 @@
+﻿.TableHeader {
+    color: aliceblue;
+    font-size: 20px;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+.TableItem {
+    color: aliceblue;
+    font-size: 15px;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+.TableSelf{
+  align-items:center;
+  align-content:center;
+  align-self:center;
+  width:100%;
+
+}
+
+th{
+    border-style:solid;
+    border-width:2px;
+    border-color:#171717;
+    background-color:rgba(27, 22, 22, 0.83)
+}
+
+td{
+    border-style: solid;
+    border-width: 2px;
+    border-color: #171717;
+    background-color:rgba(47, 44, 44, 0.82)
+}
+
+.Delete{
+    color:red;
+    padding-left:10px;
+}
+
+.Bos{
+    background-color:rgba(0, 0, 0, 0.00);
+    border-style:none;
+    opacity:0%;
+
+}

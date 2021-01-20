@@ -1,0 +1,65 @@
+﻿@model WebProgramlama_Proje.Models.User
+@using Microsoft.AspNetCore.Builder
+@using Microsoft.AspNetCore.Localization
+@using Microsoft.Extensions.Options
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.EntityFrameworkCore;
+@using WebProgramlama_Proje.Data;
+
+@inject IViewLocalizer Localizer
+@inject IOptions<RequestLocalizationOptions> LocOptions
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Create</title>
+    <link href="@Url.Content("~/css/UserCreate.css")" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+    <div class="center">
+        <p class="CreateText center">@Localizer["Create"]</p>
+        <p class="Fill"> @Localizer["Fill"]</p>
+        <hr />
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="userName" class="control-label formHeader"> @Localizer["Username"]</label>
+                <input asp-for="userName" class="form-control" />
+                <span asp-validation-for="userName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="userMail" class="control-label formHeader"> @Localizer["MailAddress"]</label>
+                <input asp-for="userMail" class="form-control" />
+                <span asp-validation-for="userMail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="userPass" class="control-label formHeader"> @Localizer["Password"]</label>
+                <input asp-for="userPass" class="form-control" />
+                <span asp-validation-for="userPass" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="userWallet" class="control-label formHeader">@Localizer["Wallet"]</label>
+                <input asp-for="userWallet" class="form-control" />
+                <span asp-validation-for="userWallet" class="text-danger"></span>
+            </div>
+            <div>
+                <input type="submit" value="Create" class=" CreateButton center" />
+            </div>
+
+        </form>
+    </div>
+    <div class="center">
+        <a class="Home center" asp-area="" asp-controller="Home" asp-action="Index">@Localizer["Home"]</a>
+    </div>
+
+
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }
+</body>
+</html>

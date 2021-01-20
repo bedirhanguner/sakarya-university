@@ -1,0 +1,42 @@
+﻿.LoginText {
+    color: aliceblue;
+    font-size: 30px;
+}
+
+.Fill {
+    color: aliceblue;
+    font-size: 15px;
+}
+.formHeader{
+    color:aliceblue;
+    font-size:15px;
+}
+
+hr {
+    background-color: aliceblue
+}
+
+.center {
+    display: block;
+    max-width: 500px;
+    margin: auto;
+}
+
+.LoginButton {
+    background-color: #171717;
+    border: none;
+    color: white;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display:block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius:5px;
+}
+
+.LoginPls {
+    color: #322b2b;
+    font-size: 15px;
+}
+
