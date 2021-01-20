@@ -1,0 +1,10 @@
+C:\Users\Lenovo\Desktop\sakarya-university-all-assignments\first-year\object-oriented-programming\project-assignment\B171210036\bin\Debug\B171210036.exe.config
+C:\Users\Lenovo\Desktop\sakarya-university-all-assignments\first-year\object-oriented-programming\project-assignment\B171210036\bin\Debug\B171210036.exe
+C:\Users\Lenovo\Desktop\sakarya-university-all-assignments\first-year\object-oriented-programming\project-assignment\B171210036\bin\Debug\B171210036.pdb
+C:\Users\Lenovo\Desktop\sakarya-university-all-assignments\first-year\object-oriented-programming\project-assignment\B171210036\obj\Debug\B171210036.csprojAssemblyReference.cache
+C:\Users\Lenovo\Desktop\sakarya-university-all-assignments\first-year\object-oriented-programming\project-assignment\B171210036\obj\Debug\B171210036_1D_PROJE.Form1.resources
+C:\Users\Lenovo\Desktop\sakarya-university-all-assignments\first-year\object-oriented-programming\project-assignment\B171210036\obj\Debug\B171210036.Properties.Resources.resources
+C:\Users\Lenovo\Desktop\sakarya-university-all-assignments\first-year\object-oriented-programming\project-assignment\B171210036\obj\Debug\B171210036.csproj.GenerateResource.cache
+C:\Users\Lenovo\Desktop\sakarya-university-all-assignments\first-year\object-oriented-programming\project-assignment\B171210036\obj\Debug\B171210036.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Desktop\sakarya-university-all-assignments\first-year\object-oriented-programming\project-assignment\B171210036\obj\Debug\B171210036.exe
+C:\Users\Lenovo\Desktop\sakarya-university-all-assignments\first-year\object-oriented-programming\project-assignment\B171210036\obj\Debug\B171210036.pdb
